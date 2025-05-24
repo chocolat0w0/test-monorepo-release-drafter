@@ -10,6 +10,9 @@ autolabeler:
   - label: "bug"
     branch:
       - '/fix\/.+/'
+  - label: "dependencies"
+    title:
+      - "/^Bump.+/"
 template: |
   ## Changes
 
