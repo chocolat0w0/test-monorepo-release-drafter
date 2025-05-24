@@ -2,6 +2,9 @@ autolabeler:
   - label: "feature"
     branch:
       - '/feat\/.+/'
+  - label: "refactor"
+    branch:
+      - '/refactor\/.+/'
   - label: "chore"
     branch:
       - '/chore\/.+/'
@@ -9,15 +12,6 @@ autolabeler:
     branch:
       - '/fix\/.+/'
   - label: "dependencies"
-    title:
-      - "/^Bump.+/"
-
-  - label: "minor"
-    branch:
-      - '/feat\/.+/'
-  - label: "patch"
-    branch:
-      - '/(chore|fix)\/.+/'
     title:
       - "/^Bump.+/"
 name-template: "v$RESOLVED_VERSION"
@@ -42,9 +36,13 @@ version-resolver:
   minor:
     labels:
       - "minor"
+      - "feature"
   patch:
     labels:
-      - "patch"
+      - "refactor"
+      - "chore"
+      - "bug"
+      - "dependencies"
   default: patch
 template: |
   ## Changes
