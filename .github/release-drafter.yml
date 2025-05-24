@@ -3,8 +3,6 @@ autolabeler:
     branch:
       - '/feat\/.+/'
   - label: "chore"
-    files:
-      - "*.md"
     branch:
       - '/chore\/.+/'
   - label: "bug"
@@ -13,6 +11,43 @@ autolabeler:
   - label: "dependencies"
     title:
       - "/^Bump.+/"
+
+  - label: "minor"
+    branch:
+      - '/feat\/.+/'
+  - label: "patch"
+    branch:
+      - '/chore\/.+/'
+      - '/fix\/.+/'
+    title:
+      - "/^Bump.+/"
+name-template: "v$RESOLVED_VERSION"
+tag-template: "v$RESOLVED_VERSION"
+categories:
+  - title: "Features"
+    labels:
+      - "feature"
+  - title: "Bug Fixes"
+    labels:
+      - "bug"
+  - title: "Maintenance"
+    label: "chore"
+  - title: "Dependencies"
+    label: "dependencies"
+commitish: refs/heads/main
+change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
+change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
+version-resolver:
+  major:
+    labels:
+      - "major"
+  minor:
+    labels:
+      - "minor"
+  patch:
+    labels:
+      - "patch"
+  default: patch
 template: |
   ## Changes
 
