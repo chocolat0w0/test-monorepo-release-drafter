@@ -1,0 +1,12 @@
+autolabeler:
+  - label: "feature"
+    branch:
+      - '/feat\/.+/'
+  - label: "chore"
+    files:
+      - "*.md"
+    branch:
+      - '/chore\/.+/'
+  - label: "bug"
+    branch:
+      - '/fix\/.+/'
