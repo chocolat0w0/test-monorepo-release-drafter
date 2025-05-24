@@ -17,8 +17,7 @@ autolabeler:
       - '/feat\/.+/'
   - label: "patch"
     branch:
-      - '/chore\/.+/'
-      - '/fix\/.+/'
+      - '/(chore|fix)\/.+/'
     title:
       - "/^Bump.+/"
 name-template: "v$RESOLVED_VERSION"
@@ -34,7 +33,6 @@ categories:
     label: "chore"
   - title: "Dependencies"
     label: "dependencies"
-commitish: refs/heads/main
 change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
 change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
 version-resolver:
