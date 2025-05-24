@@ -17,7 +17,9 @@ autolabeler:
       - '/feat\/.+/'
   - label: "patch"
     branch:
-      - '/chore\/.+/'
+      - '/(chore|fix)\/.+/'
+    title:
+      - "/^Bump.+/"
 name-template: "v$RESOLVED_VERSION"
 tag-template: "v$RESOLVED_VERSION"
 categories:
