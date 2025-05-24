@@ -14,8 +14,12 @@ autolabeler:
   - label: "dependencies"
     title:
       - "/^Bump.+/"
-name-template: "v$RESOLVED_VERSION"
-tag-template: "v$RESOLVED_VERSION"
+include-paths:
+  - "apps/app-b/"
+  - "packages/"
+name-template: app-b@$RESOLVED_VERSION
+tag-template: app-b@$RESOLVED_VERSION
+tag-prefix: app-b@
 categories:
   - title: "Features"
     labels:

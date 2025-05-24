@@ -17,11 +17,14 @@ jobs:
       contents: write # リリースを作成するために必要
       pull-requests: write # PRにラベル付与するために必要
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        app: [app-a, app-b]
     steps:
       # Drafts your next Release notes as Pull Requests are merged into "master"
       - uses: release-drafter/release-drafter@v6
         # (Optional) specify config name to use, relative to .github/. Default: release-drafter.yml
-        # with:
-        #   config-name: my-config.yml
+        with:
+          config-name: release-drafter-${{ matrix.app }}.yml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
