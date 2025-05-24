@@ -3,7 +3,7 @@ name: Release Drafter
 on:
   push: # リリースノート作成タイミング
     branches:
-      - master
+      - main
   pull_request: # autolabeler に必要
     types: [opened, reopened, synchronize]
 
