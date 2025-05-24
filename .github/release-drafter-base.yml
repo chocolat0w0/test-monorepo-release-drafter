@@ -1,0 +1,48 @@
+autolabeler:
+  - label: "feature"
+    branch:
+      - '/feat\/.+/'
+  - label: "refactor"
+    branch:
+      - '/refactor\/.+/'
+  - label: "chore"
+    branch:
+      - '/chore\/.+/'
+  - label: "bug"
+    branch:
+      - '/fix\/.+/'
+  - label: "dependencies"
+    title:
+      - "/^Bump.+/"
+categories:
+  - title: "Features"
+    labels:
+      - "feature"
+  - title: "Bug Fixes"
+    labels:
+      - "bug"
+  - title: "Maintenance"
+    label: "chore"
+  - title: "Dependencies"
+    label: "dependencies"
+change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
+change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
+version-resolver:
+  major:
+    labels:
+      - "major"
+  minor:
+    labels:
+      - "minor"
+      - "feature"
+  patch:
+    labels:
+      - "refactor"
+      - "chore"
+      - "bug"
+      - "dependencies"
+  default: patch
+template: |
+  ## Changes
+
+  $CHANGES
