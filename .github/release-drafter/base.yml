@@ -11,9 +11,6 @@ autolabeler:
   - label: "bug"
     branch:
       - '/fix\/.+/'
-  - label: "dependencies"
-    title:
-      - "/^Bump.+/"
 categories:
   - title: "Features"
     labels:
@@ -21,10 +18,15 @@ categories:
   - title: "Bug Fixes"
     labels:
       - "bug"
-  - title: "Maintenance"
-    label: "chore"
-  - title: "Dependencies"
-    label: "dependencies"
+  - title: "Refactors"
+    labels:
+      - "refactor"
+  - title: "Chores"
+    labels:
+      - "chore"
+      - "dependencies"
+    collapse-after: 5
+  - title: "Other changes"
 change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
 change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
 version-resolver:
@@ -33,7 +35,6 @@ version-resolver:
       - "major"
   minor:
     labels:
-      - "minor"
       - "feature"
   patch:
     labels:
