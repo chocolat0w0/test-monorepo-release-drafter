@@ -11,6 +11,14 @@ autolabeler:
   - label: "bug"
     branch:
       - '/fix\/.+/'
+  - label: "app:app-a"
+    files:
+      - "apps/app-a/**/*"
+      - "packages/**/*"
+  - label: "app:app-b"
+    files:
+      - "apps/app-b/**/*"
+      - "packages/**/*"
 categories:
   - title: "Features"
     labels:
