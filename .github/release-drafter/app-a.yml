@@ -8,4 +8,4 @@ tag-prefix: app-a@
 footer: |
 
   ---
-  **Full Changelog:** https://github.com/$OWNER/$REPOSITORY/compare/$PREVIOUS_TAG...app-a@$RESOLVED_VERSION
+  **Full Changelog:** [$PREVIOUS_TAG...app-a@$RESOLVED_VERSION](https://github.com/$OWNER/$REPOSITORY/compare/$PREVIOUS_TAG...app-a@$RESOLVED_VERSION)
