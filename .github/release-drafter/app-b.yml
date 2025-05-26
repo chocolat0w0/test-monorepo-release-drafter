@@ -1,4 +1,4 @@
-_extends: test-monorepo-release-drafter:.github/release-drafter/base.yml
+_extends: test-monorepo-release-drafter:.github/release-drafter/_base.yml
 include-paths:
   - "apps/app-b/"
   - "packages/"
