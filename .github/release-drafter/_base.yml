@@ -1,16 +1,16 @@
 autolabeler:
   - label: "feature"
     branch:
-      - '/^feat.*\/.+/'
+      - "/^feat.+/"
   - label: "refactor"
     branch:
-      - '/refactor\/.+/'
+      - "/^refact.+/"
   - label: "chore"
     branch:
-      - '/chore\/.+/'
+      - "/^chore.+/"
   - label: "bug"
     branch:
-      - '/fix\/.+/'
+      - "/^fix.+/"
   - label: "app:app-a"
     files:
       - "apps/app-a/**/*"
