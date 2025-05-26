@@ -1,7 +1,7 @@
 autolabeler:
   - label: "feature"
     branch:
-      - '/feat\/.+/'
+      - '/^feat.*\/.+/'
   - label: "refactor"
     branch:
       - '/refactor\/.+/'
