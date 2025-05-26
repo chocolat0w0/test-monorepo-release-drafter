@@ -5,3 +5,7 @@ include-paths:
 name-template: app-b@$RESOLVED_VERSION
 tag-template: app-b@$RESOLVED_VERSION
 tag-prefix: app-b@
+footer: |
+
+  ---
+  **Full Changelog:** https://github.com/$OWNER/$REPOSITORY/compare/$PREVIOUS_TAG...app-b@$RESOLVED_VERSION
